@@ -1,0 +1,142 @@
+.section {
+  position: relative;
+  width: 100%;
+
+  background: linear-gradient(to bottom, #ffffff 0%, #e8f6ff 50%, #ffffff 100%);
+  padding: 40px 16px;
+  overflow: hidden;
+}
+
+.section::before,
+.section::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.section::before {
+  top: 0;
+  background-image: url("/wave-top.svg");
+}
+
+.section::after {
+  bottom: 0;
+  background-image: url("/wave-bottom.svg");
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem; /* mobile size */
+  margin-bottom: 24px;
+  color: #155fa0;
+  position: relative;
+  z-index: 2;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: one column */
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.title {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background-color: rgba(173, 216, 230, 0.85);
+  color: #002d3a;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.price {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #007088;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.content {
+  padding: 12px;
+  text-align: center;
+  background-color: #f9fafa;
+}
+
+/* Tablet (≥768px) */
+@media (min-width: 768px) {
+  .section {
+    padding: 50px 24px;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 32px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    gap: 20px;
+  }
+
+  .image {
+    height: 180px;
+  }
+}
+
+/* Desktop (≥1280px) */
+@media (min-width: 1280px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .image {
+    height: 180px;
+  }
+}

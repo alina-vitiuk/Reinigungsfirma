@@ -1,0 +1,116 @@
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.sectionTop {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.sectionTop svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sectionTop2 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg) scaleX(+1);
+}
+
+.offerText {
+  color: #155fa0;
+  font-size: 1.5rem; /* mobile size */
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.offerHighlight {
+  color: #39a96e;
+  font-size: 1.75rem; /* mobile size */
+  font-weight: 800;
+  margin: 1rem 0;
+}
+
+.offerSubtext {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.offerButton {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.65rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.offerButton:hover {
+  background-color: #0056b3;
+}
+
+/* Tablet (≥768px) */
+@media (min-width: 768px) {
+  .container {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .offerText {
+    font-size: 1.75rem;
+  }
+
+  .offerHighlight {
+    font-size: 2.25rem;
+  }
+
+  .offerSubtext {
+    font-size: 1.05rem;
+    max-width: 600px;
+  }
+
+  .offerButton {
+    font-size: 1.05rem;
+    padding: 0.75rem 1.75rem;
+  }
+}
+
+/* Desktop (≥1280px) */
+@media (min-width: 1280px) {
+  .container {
+    padding: 4rem 1.5rem;
+  }
+
+  .offerText {
+    font-size: 2rem;
+  }
+
+  .offerHighlight {
+    font-size: 2.5rem;
+  }
+
+  .offerSubtext {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+
+  .offerButton {
+    font-size: 1rem;
+    padding: 0.75rem 1.75rem;
+  }
+}

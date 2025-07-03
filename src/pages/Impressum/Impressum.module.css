@@ -1,0 +1,43 @@
+.impressum {
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+.impressum h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #155fa0;
+  text-align: center;
+}
+
+.impressum h2 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #155fa0;
+}
+
+.impressum h3 {
+  font-size: 1.125rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+  color: #155fa0;
+}
+
+.impressum p {
+  margin-bottom: 1rem;
+}
+
+.impressum a {
+  color: #155fa0;
+  text-decoration: none;
+}
+
+.impressum a:hover {
+  text-decoration: underline;
+}

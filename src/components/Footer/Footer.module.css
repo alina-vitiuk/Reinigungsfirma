@@ -1,0 +1,148 @@
+a {
+  text-decoration: none;
+}
+
+.footer {
+  border-radius: 5px;
+  background: linear-gradient(to right, #eaf7ff, #c8eafd);
+  color: #155fa0;
+  padding: 2rem 1rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.left,
+.center,
+.right {
+  width: 100%;
+}
+
+.slogan {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.contact p,
+.contact a {
+  color: #155fa0;
+  display: flex;
+  align-items: center;
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  color: #104d83;
+  flex-shrink: 0;
+}
+
+.center ul,
+.right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.center li,
+.right li {
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.menuLink {
+  color: #3484ca;
+}
+
+.callbackBtn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.95rem;
+  width: 100%;
+  max-width: 250px;
+}
+
+.callbackBtn:hover {
+  background-color: #0056b3;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #bbb;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bottomText {
+  color: #104d83;
+}
+
+@media (min-width: 768px) {
+  .top {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .left,
+  .center,
+  .right {
+    flex: 1 1 250px;
+    max-width: 32%;
+  }
+
+  .callbackBtn {
+    width: auto;
+  }
+
+  .slogan {
+    font-size: 1.1rem;
+  }
+
+  .bottom {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer {
+    width: 1280px;
+    padding: 3rem 4rem;
+  }
+
+  .slogan {
+    font-size: 1.2rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
+
+  .center li,
+  .right li,
+  .callbackBtn {
+    font-size: 1rem;
+  }
+
+  .bottom {
+    font-size: 1rem;
+  }
+}

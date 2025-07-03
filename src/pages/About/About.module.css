@@ -1,0 +1,250 @@
+.about {
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #ffffff;
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #155fa0;
+  text-align: center;
+}
+
+.subheading {
+  font-size: 1.125rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #155fa0;
+}
+
+.text {
+  margin-bottom: 1rem;
+}
+
+.image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.listItem {
+  border: 1px solid #0e4c85;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.icon {
+  color: #155fa0;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.partnerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  background-color: #f8fafd;
+  padding: 1.5rem;
+  border-radius: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+.partnerImage {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.partnerText {
+  width: 100%;
+}
+
+.partnerText p {
+  margin-bottom: 0.75rem;
+}
+
+.partnerButton {
+  background-color: #63c0df;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 300px;
+  transition: background-color 0.3s ease;
+}
+
+.partnerButton:hover {
+  background-color: #50acc9;
+}
+
+.jobCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.jobCard {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.jobLinkCard {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.jobImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.jobTitle {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #d2edf7;
+  color: #155fa0;
+  font-weight: bold;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+/* ========== Tablet (min-width: 768px) ========== */
+@media (min-width: 768px) {
+  .about {
+    padding: 2rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .subheading {
+    font-size: 1.375rem;
+  }
+
+  .image {
+    height: 240px;
+  }
+
+  .list {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .partnerSection {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .partnerImage {
+    max-width: 360px;
+    flex-shrink: 0;
+  }
+
+  .partnerText {
+    max-width: 600px;
+  }
+
+  .partnerButton {
+    width: auto;
+  }
+
+  .jobCards {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .jobCard {
+    flex: 1 1 calc(33.33% - 1rem);
+    max-width: calc(33.33% - 1rem);
+  }
+
+  .jobTitle {
+    font-size: 1.125rem;
+  }
+}
+
+/* ========== Desktop (min-width: 1280px) ========== */
+@media (min-width: 1280px) {
+  .about {
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .subheading {
+    font-size: 1.5rem;
+  }
+
+  .image {
+    height: 280px;
+  }
+
+  .list {
+    gap: 1.25rem;
+  }
+
+  .partnerImage {
+    max-width: 400px;
+  }
+
+  .partnerText {
+    max-width: 700px;
+  }
+
+  .jobCards {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .jobCard {
+    max-width: 360px;
+  }
+
+  .jobTitle {
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .jobImage {
+    height: 240px;
+  }
+}
