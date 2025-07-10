@@ -1,4 +1,5 @@
 .faqSection {
+  width: 320px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -109,6 +110,7 @@
 /* Tablet */
 @media (min-width: 768px) {
   .faqSection {
+    width: 768px;
     flex-direction: row;
     align-items: flex-start;
     padding: 3rem 2rem;
@@ -132,7 +134,7 @@
 /* Desktop */
 @media (min-width: 1280px) {
   .faqSection {
-    max-width: 1200px;
+    width: 1280px;
     margin: 0 auto;
     padding: 4rem 3rem;
   }

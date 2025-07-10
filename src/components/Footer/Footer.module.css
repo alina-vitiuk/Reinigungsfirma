@@ -63,6 +63,24 @@ a {
   color: #3484ca;
 }
 
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.socialLinks a {
+  font-size: 1.25rem;
+  color: #155fa0;
+  transition: color 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: #0e4c84;
+}
+
 .callbackBtn {
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
@@ -96,29 +114,56 @@ a {
 }
 
 @media (min-width: 768px) {
+  .footer {
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+  }
+
   .top {
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 12px;
   }
 
   .left,
   .center,
   .right {
-    flex: 1 1 250px;
-    max-width: 32%;
+    flex: 1;
+    max-width: 33.33%;
+  }
+
+  .slogan {
+    font-size: 1rem;
+  }
+
+  .contact p {
+    font-size: 0.85rem;
+  }
+
+  .center li,
+  .right li,
+  .callbackBtn {
+    font-size: 0.85rem;
+  }
+
+  .socialLinks {
+    gap: 16px;
+    margin-top: 1.2rem;
+  }
+
+  .socialLinks a {
+    font-size: 1.4rem;
   }
 
   .callbackBtn {
     width: auto;
-  }
-
-  .slogan {
-    font-size: 1.1rem;
+    padding: 6px 12px;
   }
 
   .bottom {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -140,6 +185,17 @@ a {
   .right li,
   .callbackBtn {
     font-size: 1rem;
+  }
+
+  .socialLinks {
+    width: 376px;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1.5rem;
+  }
+
+  .socialLinks a {
+    font-size: 1.5rem;
   }
 
   .bottom {

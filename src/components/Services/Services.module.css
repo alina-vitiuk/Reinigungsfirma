@@ -1,7 +1,6 @@
 .section {
   position: relative;
-  width: 100%;
-
+  width: 320px;
   background: linear-gradient(to bottom, #ffffff 0%, #e8f6ff 50%, #ffffff 100%);
   padding: 40px 16px;
   overflow: hidden;
@@ -99,6 +98,7 @@ h2 {
 /* Tablet (≥768px) */
 @media (min-width: 768px) {
   .section {
+    width: 768px;
     padding: 50px 24px;
   }
 
@@ -120,6 +120,7 @@ h2 {
 /* Desktop (≥1280px) */
 @media (min-width: 1280px) {
   .section {
+    width: 1280px;
     padding: 60px 20px;
   }
 

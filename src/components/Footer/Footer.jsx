@@ -1,6 +1,8 @@
 import React from "react";
 import css from "./Footer.module.css";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -58,6 +60,29 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
+          <div className={css.socialLinks}>
+            <a
+              href="https://www.instagram.com/lik_reinigungsservice?igsh=bGF4dDd1cWowOHds"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://www.facebook.com/share/1BfhvREpk9/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook />
+            </a>
+          </div>
         </div>
 
         <div className={css.right}>

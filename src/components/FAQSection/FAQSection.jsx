@@ -76,6 +76,7 @@ const FAQSection = () => {
           className={css.messageBox}
           placeholder="Ihre Nachricht an uns"
         ></textarea>
+        <button className={css.sendButton}>Nachricht senden</button>
       </div>
     </section>
   );

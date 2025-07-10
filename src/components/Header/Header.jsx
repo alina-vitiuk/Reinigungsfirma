@@ -18,13 +18,13 @@ const Header = () => {
 
         <ul className={css.navMenuList}>
           <li>
-            <Link to="/leistungen" className={css.navListItem}>
-              Dienstleistungen
+            <Link to="/uber-uns" className={css.navListItem}>
+              über uns
             </Link>
           </li>
           <li>
-            <Link to="/uber-uns" className={css.navListItem}>
-              über uns
+            <Link to="/leistungen" className={css.navListItem}>
+              Dienstleistungen
             </Link>
           </li>
           <li>
