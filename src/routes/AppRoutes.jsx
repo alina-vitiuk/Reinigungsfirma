@@ -11,6 +11,7 @@ import Service from "../pages/Service/Service";
 import Impressum from "../pages/Impressum/Impressum";
 import Jobs from "../pages/Jobs/Jobs";
 import NotFound from "../pages/NotFound/NotFound";
+import AdditionalServices from "../components/AdditionalServices/AdditionalServices";
 import FAQSection from "../components/FAQSection/FAQSection";
 import Contact from "../pages/Contact/Contact";
 import Resume from "../pages/Resume/Resume";
@@ -28,6 +29,7 @@ const AppRoutes = () => {
             <Offer />
             <Priopity />
             <ServiceGrid />
+            <AdditionalServices />
             <FAQSection />
           </>
         }
