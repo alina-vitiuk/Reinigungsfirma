@@ -1,21 +1,16 @@
+/* ========== BASE: Mobile First ========== */
 .bewerbung {
-  max-width: 600px;
+  width: 320px;
   margin: 0 auto;
   padding: 2rem 1rem;
   font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #ffffff 0%, #e8f6ff 50%, #ffffff 100%);
   color: #003b71;
-}
-
-select {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  margin-top: 0.25rem;
+  box-sizing: border-box;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -23,6 +18,7 @@ h1 {
 p {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 1rem;
 }
 
 .form {
@@ -36,15 +32,19 @@ label {
   color: #155fa0;
   display: flex;
   flex-direction: column;
+  font-size: 0.95rem;
 }
 
 input,
-textarea {
+textarea,
+select {
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   margin-top: 0.25rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 button {
@@ -56,6 +56,9 @@ button {
   border-radius: 8px;
   cursor: pointer;
   margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 button:hover {
@@ -64,19 +67,57 @@ button:hover {
 
 @media (min-width: 768px) {
   .bewerbung {
+    width: 780px;
     padding: 3rem 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 1.05rem;
+  }
+
+  button {
+    font-size: 1.05rem;
+    width: auto;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bewerbung {
+    width: 1280px;
+    padding: 4rem 10rem;
   }
 
   h1 {
     font-size: 2.25rem;
   }
 
+  p {
+    font-size: 1.1rem;
+  }
+
   input,
-  textarea {
-    font-size: 1.05rem;
+  textarea,
+  select {
+    font-size: 1.1rem;
   }
 
   button {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    padding: 0.85rem 2rem;
   }
 }
