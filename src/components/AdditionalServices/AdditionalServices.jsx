@@ -23,7 +23,6 @@ const AdditionalServices = () => {
           </div>
         ))}
       </div>
-      <button>Senden</button>
     </section>
   );
 };
