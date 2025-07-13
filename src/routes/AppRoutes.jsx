@@ -8,7 +8,6 @@ import ServiceGrid from "../components/Services/Services";
 import About from "../pages/About/About";
 import JobDetails from "../pages/JobDetails/JobDetails";
 import Service from "../pages/Service/Service";
-import AdditionalServices from "../components/AdditionalServices/AdditionalServices";
 import Impressum from "../pages/Impressum/Impressum";
 import Jobs from "../pages/Jobs/Jobs";
 import NotFound from "../pages/NotFound/NotFound";
@@ -29,7 +28,6 @@ const AppRoutes = () => {
             <Offer />
             <Priopity />
             <ServiceGrid />
-            <AdditionalServices />
             <FAQSection />
           </>
         }
