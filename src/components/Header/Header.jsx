@@ -40,8 +40,8 @@ const Header = () => {
               <a href="tel:+4917661122476">tel:+4917661122476</a>
             </li>
             <li className={css.addressListItem}>
-              <a href="mailto:sauberkeit.leader@gmail.com">
-                sauberkeit.leader@gmail.com
+              <a href="mailto:info@likreinigungsservice.com">
+                info@likreinigungsservice.com
               </a>
             </li>
           </ul>

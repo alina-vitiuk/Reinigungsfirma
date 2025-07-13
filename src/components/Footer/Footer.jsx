@@ -28,9 +28,9 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="mailto:likreinigungsservice@gmail.com">
+              <a href="mailto:info@likreinigungsservice.com">
                 <FaEnvelope className={css.icon} />{" "}
-                likreinigungsservice@gmail.com
+                info@likreinigungsservice.com
               </a>
             </li>
           </ul>

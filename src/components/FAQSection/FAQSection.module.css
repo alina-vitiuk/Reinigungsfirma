@@ -96,6 +96,16 @@
   color: #155fa0;
 }
 
+.phoneInput {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .messageBox {
   width: 100%;
   min-height: 100px;

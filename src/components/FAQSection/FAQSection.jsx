@@ -72,6 +72,15 @@ const FAQSection = () => {
           <a href="tel:+4917661122476">+49 176 6112 2476</a>
         </div>
 
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Ihre Telefonnummer*"
+          className={css.phoneInput}
+          required
+          pattern="^[+0-9\s\-]{6,}$"
+        />
+
         <textarea
           className={css.messageBox}
           placeholder="Ihre Nachricht an uns"
