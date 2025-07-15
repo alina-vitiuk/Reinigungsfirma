@@ -1,0 +1,187 @@
+/* ===== Base (Mobile First) ===== */
+.wrapper {
+  width: 320px;
+  padding: 2rem 1rem;
+  background: linear-gradient(to bottom, #ffffff, #e8f6ff, #ffffff);
+  font-family: "Segoe UI", sans-serif;
+  color: #003b71;
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ===== Intro block ===== */
+.introBlock {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.textBlock {
+  text-align: center;
+}
+
+.textBlock h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.textBlock h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #007bff;
+}
+
+.textBlock p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.textBlock h3 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  color: #155fa0;
+}
+
+.primaryBtn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #155fa0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #0e4c84;
+}
+
+.imageBlock {
+  max-width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 59, 113, 0.08);
+  width: 100%;
+}
+
+/* ===== Умови / Доставка / Використання ===== */
+.conditions {
+  margin-top: 3rem;
+}
+
+.boxGroup {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.conditionBox {
+  border-left: 4px solid #007bff;
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 59, 113, 0.06);
+}
+
+.conditionBox h3,
+.conditionBox h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+  color: #155fa0;
+}
+
+.conditionBox ul,
+.conditionBox ol {
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.conditionBox li {
+  margin-bottom: 0.5rem;
+}
+
+.conditionBox p {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.conditionBox em {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ===== Tablet (≥768px) ===== */
+@media (min-width: 768px) {
+  .wrapper {
+    width: 768px;
+    padding: 3rem 2rem;
+  }
+  .introBlock {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .textBlock {
+    flex: 1;
+  }
+
+  .textBlock h1 {
+    font-size: 1.8rem;
+  }
+
+  .textBlock h2 {
+    font-size: 1.3rem;
+  }
+
+  .imageBlock {
+    max-width: 320px;
+  }
+
+  .boxGroup {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .conditionBox {
+    padding: 1.5rem;
+  }
+}
+
+/* ===== Desktop (≥1280px) ===== */
+@media (min-width: 1280px) {
+  .wrapper {
+    width: 1280px;
+    padding: 4rem 3rem;
+  }
+  .textBlock h1 {
+    font-size: 2rem;
+  }
+
+  .textBlock h2 {
+    font-size: 1.5rem;
+  }
+
+  .conditionBox h3,
+  .conditionBox h4 {
+    font-size: 1.3rem;
+  }
+
+  .conditionBox ul,
+  .conditionBox ol,
+  .conditionBox p {
+    font-size: 1rem;
+  }
+
+  .boxGroup {
+    gap: 2rem;
+  }
+}

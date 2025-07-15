@@ -92,7 +92,9 @@ const Footer = () => {
             <li>Fr: 9:00 - 16:00</li>
             <li>Sa: 10:00 - 14:00</li>
           </ul>
-          <button className={css.callbackBtn}>Wir rufen Sie zurück</button>
+          <Link to="/callback" className={css.callbackBtn}>
+            Wir rufen Sie zurück
+          </Link>
         </div>
       </div>
 

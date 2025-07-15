@@ -12,9 +12,11 @@ import Impressum from "../pages/Impressum/Impressum";
 import Jobs from "../pages/Jobs/Jobs";
 import NotFound from "../pages/NotFound/NotFound";
 import AdditionalServices from "../components/AdditionalServices/AdditionalServices";
+import Callback from "../pages/Callback/Callback";
 import FAQSection from "../components/FAQSection/FAQSection";
 import Contact from "../pages/Contact/Contact";
 import Resume from "../pages/Resume/Resume";
+import Coupon from "../pages/Coupon/Coupon";
 
 import jobData from "../data/jobData";
 
@@ -39,6 +41,9 @@ const AppRoutes = () => {
       <Route path="/jobs/:id" element={<JobDetails />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/resume" element={<Resume />} />
+      <Route path="/callback" element={<Callback />} />
+      <Route path="/callback" element={<Callback />} />
+      <Route path="/coupon" element={<Coupon />} />
       <Route path="/impressum" element={<Impressum />} />
       <Route path="/jobs" element={<Jobs />} />
 

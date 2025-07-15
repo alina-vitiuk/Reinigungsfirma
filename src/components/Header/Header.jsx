@@ -32,6 +32,11 @@ const Header = () => {
               jobs
             </Link>
           </li>
+          <li>
+            <Link to="/coupon" className={css.navListItem}>
+              Gutschein
+            </Link>
+          </li>
         </ul>
 
         <address className={css.addressMenu}>
