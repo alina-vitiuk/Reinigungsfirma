@@ -1,4 +1,5 @@
 .jobsPage {
+  width: 320px;
   padding: 1.5rem;
   font-family: Arial, sans-serif;
   color: #333;
@@ -53,6 +54,9 @@
 }
 
 @media (min-width: 768px) {
+  .jobsPage {
+    width: 768px;
+  }
   .subheading {
     font-size: 1.75rem;
     text-align: left;
@@ -76,8 +80,8 @@
 
 @media (min-width: 1280px) {
   .jobsPage {
+    width: 1280px;
     padding: 3rem;
-    width: 1200px;
     margin: 0 auto;
   }
 
