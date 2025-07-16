@@ -15,6 +15,7 @@ import { FaHandshake } from "react-icons/fa";
 const About = ({ jobs }) => {
   return (
     <section className={css.about}>
+      <h2 className={css.title}>LIK Reinigungsservice</h2>
       <p className={css.text}>
         Likreinigungsservice wurde im Jahr 2024 von den beiden Gründern als GbR
         ins Leben gerufen. Der Hauptsitz befindet sich in Hamburg. Die

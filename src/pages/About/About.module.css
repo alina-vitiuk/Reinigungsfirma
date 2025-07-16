@@ -7,6 +7,10 @@
   background-color: #ffffff;
 }
 
+.title {
+  margin-bottom: 4px;
+}
+
 .heading {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -145,6 +149,11 @@
   .about {
     width: 768px;
     padding: 2rem;
+  }
+
+  .title {
+    margin-top: 0px;
+    margin-bottom: 16px;
   }
 
   .heading {

@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .container {
   width: 320px;
   background: linear-gradient(to bottom, #ffffff 0%, #e8f6ff 50%, #ffffff 100%);

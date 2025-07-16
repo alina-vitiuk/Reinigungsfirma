@@ -3,6 +3,7 @@ import css from "./Offer.module.css";
 const Offer = () => {
   return (
     <section className={css.container}>
+      <h2 className={css.hidden}>Angebot</h2>
       <div className={css.sectionTop}>
         <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
           <path

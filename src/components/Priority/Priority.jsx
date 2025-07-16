@@ -44,6 +44,7 @@ const PriorityItem = ({ icon, title, description }) => (
 const Priority = () => {
   return (
     <section className={css.container}>
+      <h2 className={css.hidden}>Priority</h2>
       <img
         className={css.image}
         src={heroImg}
@@ -52,7 +53,7 @@ const Priority = () => {
         height="560"
       />
       <div>
-        <h2 className={css.text}>Warum Saubarkeit wählen?</h2>
+        <h2 className={css.text}>Warum LIK Reinigungsservice wählen?</h2>
         <p className={css.subtext}>
           Wir bieten mehr als nur Reinigung. Wir schaffen eine Umgebung, in der
           Sie sich wohlfühlen und Ihre Zeit optimal nutzen können.
