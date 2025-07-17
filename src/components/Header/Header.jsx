@@ -22,10 +22,25 @@ const Header = () => {
               über uns
             </Link>
           </li>
-          <li>
-            <Link to="/leistungen" className={css.navListItem}>
-              Dienstleistungen
-            </Link>
+          <li className={css.dropdown}>
+            <span className={css.navListItem}>Dienstleistungen ▼</span>
+            <ul className={css.dropdownMenu}>
+              <li>
+                <Link to="/leistungen" className={css.dropdownItem}>
+                  Dienstleistungen
+                </Link>
+              </li>
+              <li>
+                <Link to="/art-der-leistung" className={css.dropdownItem}>
+                  Art der Leistung
+                </Link>
+              </li>
+              <li>
+                <Link to="/zusatzleistungen" className={css.dropdownItem}>
+                  Zusatzleistungen
+                </Link>
+              </li>
+            </ul>
           </li>
           <li>
             <Link to="/jobs" className={css.navListItem}>

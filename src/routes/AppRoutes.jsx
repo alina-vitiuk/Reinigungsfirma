@@ -17,6 +17,8 @@ import FAQSection from "../components/FAQSection/FAQSection";
 import Contact from "../pages/Contact/Contact";
 import Resume from "../pages/Resume/Resume";
 import Coupon from "../pages/Coupon/Coupon";
+import ServiceTypes from "../pages/ServiceTypes/ServiceTypes";
+import OptionalServices from "../pages/OptionalServices/OptionalServices";
 
 import jobData from "../data/jobData";
 
@@ -38,6 +40,8 @@ const AppRoutes = () => {
       />
       <Route path="/uber-uns" element={<About jobs={jobData} />} />
       <Route path="/leistungen" element={<Service />} />
+      <Route path="art-der-leistung" element={<ServiceTypes />} />
+      <Route path="/zusatzleistungen" element={<OptionalServices />} />
       <Route path="/jobs/:id" element={<JobDetails />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/resume" element={<Resume />} />

@@ -50,6 +50,15 @@ const ContactPage = () => {
           <option>Sonstige</option>
         </select>
 
+        <select
+          id="service"
+          className={css.select}
+          value={service}
+          onChange={(e) => setService(e.target.value)}
+        >
+          <option>Hamburg</option>
+        </select>
+
         <textarea
           className={css.textarea}
           placeholder="Ihre Nachricht an uns"

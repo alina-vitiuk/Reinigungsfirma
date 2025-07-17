@@ -1,0 +1,114 @@
+.section {
+  width: 320px;
+  padding: 2rem 1rem;
+  background: linear-gradient(to bottom, #ffffff, #e8f6ff);
+  font-family: "Segoe UI", sans-serif;
+  color: #003b71;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #ffffff;
+  border: 1px solid #cce6f8;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 59, 113, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #155fa0;
+}
+
+.detailSection {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 59, 113, 0.08);
+}
+
+.detailSection h2 {
+  color: #155fa0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.detailSection h3 {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: #155fa0;
+}
+
+.detailSection h4 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #0e4c84;
+}
+
+.detailSection ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.detailSection li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .section {
+    width: 768px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    min-width: 1280px;
+  }
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .detailSection {
+    padding: 2.5rem;
+  }
+}
