@@ -1,19 +1,36 @@
+import React, { useEffect, useState } from "react";
 import css from "./Hero.module.css";
 
-const Header = () => {
+const images = [
+  new URL("../../Images/Hero1.jpg", import.meta.url).href,
+  new URL("../../Images/Hero2.jpg", import.meta.url).href,
+];
+
+const Hero = () => {
+  const [activeImage, setActiveImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImage((prev) => (prev === 0 ? 1 : 0));
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className={css.container}>
-      <h1 className={css.heroText}>
-        Liebe Kundinnen und Kunden, wir freuen uns, Ihnen unsere
-        Reinigungsdienste anbieten zu dürfen und werden dabei all Ihre Wünsche
-        berücksichtigen. Wir arbeiten für Sie und Ihren Komfort.
-      </h1>
-      <p className={css.heroSubtext}>
-        Mit herzlichen Grüßen <br />
-        Ihr LIK Reinigungsservice-Team
-      </p>
+    <section className={css.hero}>
+      {images.map((img, index) => (
+        <img
+          key={index}
+          src={img}
+          alt={`Hero ${index + 1}`}
+          className={`${css.image} ${
+            index === activeImage ? css.visible : css.hidden
+          }`}
+        />
+      ))}
     </section>
   );
 };
 
-export default Header;
+export default Hero;
