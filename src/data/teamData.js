@@ -1,43 +1,47 @@
 const teamData = [
   {
-    role: "Менеджер по роботі з персоналом",
-    name: "Прізвище…",
+    role: "Personalmanager/in",
+    name: "Nachname …",
     phone: "+49 …",
     email: "personal@example.com",
     image: "personal.jpg",
-    description: "Звертайтесь з питань резюме та працевлаштування.",
+    description: "Ansprechpartner/in für Bewerbungen und Personalfragen.",
   },
   {
-    role: "Менеджер по роботі з клієнтами",
-    name: "Прізвище…",
+    role: "Kundenmanager/in",
+    name: "Nachname …",
     phone: "+49 …",
     email: "kunden@example.com",
     image: "kunden.jpg",
-    description: "Звернення клієнтів, отримання пропозицій, обговорення умов.",
+    description:
+      "Anfragen von Kund:innen, Angebotsanfragen und Vertragsabsprachen.",
   },
   {
-    role: "Контролер якості прибирання",
-    name: "Прізвище…",
+    role: "Qualitätskontrolleur/in",
+    name: "Nachname …",
     phone: "+49 …",
     email: "qualitaet@example.com",
     image: "qualitaet.jpg",
-    description: "Контроль якості виконаних робіт, стандарти чистоти.",
+    description:
+      "Kontrolle der Reinigungsqualität und Einhaltung von Standards.",
   },
   {
-    role: "Керівник",
-    name: "Прізвище…",
+    role: "Geschäftsführer/in",
+    name: "Nachname …",
     phone: "+49 …",
     email: "leitung@example.com",
     image: "leitung.jpg",
-    description: "Загальне управління та координація діяльності компанії.",
+    description:
+      "Gesamtleitung und strategische Koordination des Unternehmens.",
   },
   {
-    role: "Засновники",
-    name: "Прізвища…",
+    role: "Gründer/innen",
+    name: "Nachnamen …",
     phone: "+49 …",
     email: "gruender@example.com",
     image: "gruender.jpg",
-    description: "Візія, розвиток і стратегічні рішення компанії.",
+    description:
+      "Vision, Entwicklung und strategische Ausrichtung des Unternehmens.",
   },
 ];
 
