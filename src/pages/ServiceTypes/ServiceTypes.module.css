@@ -23,7 +23,13 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.timeGrid {
+  display: grid;
   gap: 1rem;
   margin-bottom: 2rem;
 }
@@ -53,36 +59,86 @@
 }
 
 .textBlock {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 59, 113, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 1rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #c8eafd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color: #f9fbfd;
+  box-shadow: 0 2px 8px rgba(0, 59, 113, 0.05);
+  gap: 1.5rem;
+}
+
+.rowReverse {
+  flex-direction: column-reverse;
 }
 
 .textBlock h2 {
   font-size: 1.4rem;
   color: #155fa0;
-  margin-top: 1.5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .textBlock p {
-  margin: 0.8rem 0;
   line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #0a3e6f;
+  margin-bottom: 1rem;
+}
+
+.textBlock ul,
+.textBlock li {
+  text-align: left;
 }
 
 .textBlock ul {
-  padding-left: 1.2rem;
-  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  list-style: none; /* прибираємо стандартні буліти */
 }
 
 .textBlock li {
+  position: relative;
+  padding-left: 1.6rem;
   margin-bottom: 0.5rem;
-  list-style: disc;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: left;
 }
 
+.textBlock li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  margin-right: 0.3rem;
+}
+
+.imageBox img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
 /* Tablet */
 @media (min-width: 768px) {
   .section {
@@ -92,12 +148,46 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .timeGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .title {
     font-size: 2.25rem;
   }
 
   .subheading {
     font-size: 1.3rem;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* ← щоб .text і .imageBox були однакової висоти */
+    min-height: 320px;
+  }
+
+  .rowReverse {
+    flex-direction: row-reverse;
+  }
+
+  .text {
+    flex: 1;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* ← центр по вертикалі */
+  }
+
+  .imageBox {
+    flex: 1;
+  }
+
+  .imageBox img {
+    height: 100%; /* ← займає всю висоту .item */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
   }
 }
 
@@ -109,6 +199,10 @@
   .grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+  }
+
+  .time {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .card {

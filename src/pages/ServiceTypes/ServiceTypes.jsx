@@ -29,6 +29,86 @@ const zeiten = [
   { text: "Morgen-/Abendreinigung", icon: <FaCalendarDay /> },
 ];
 
+const cleaningTypes = [
+  {
+    icon: <FaBroom />,
+    title: "Regelmäßige Reinigung",
+    image: "regelmaessig.jpg",
+    description:
+      "Regelmäßige Reinigung ist die Grundlage für ein angenehmes und sauberes Zimmer. Dazu gehört die Trocken- und Nassreinigung bestimmter Flächen, Müll entfernen, Geschirr abwaschen und Ordnung schaffen.",
+    highlight: "Empfohlen: 1–3 Mal pro Woche",
+    list: [
+      "Keine Reinigung von Möbeln/Geräten von innen",
+      "Kein Entfernen von Schmutz an schwer zugänglichen Stellen",
+      "Keine Teppich-/Polstertrockenreinigung",
+    ],
+  },
+  {
+    icon: <FaPumpSoap />,
+    title: "Grundreinigung",
+    image: "grundreinigung.jpg",
+    description:
+      "Für ein angenehmes und sicheres Raumklima. Umfasst Außenflächen, Müllabfuhr, Geschirrspülen, Ordnung schaffen.",
+    highlight: "Empfohlen: 1–2 Mal pro Monat",
+    list: [
+      "Keine Innenreinigung von Möbeln/Geräten",
+      "Keine Tiefenreinigung von Teppichen/Polstern",
+    ],
+  },
+  {
+    icon: <FaTools />,
+    title: "Allgemeine Reinigung",
+    image: "allgemein.jpg",
+    description: "Umfassende Reinigung innen und außen.",
+    highlight: "Empfohlen 2–4 Mal pro Jahr",
+    list: [
+      "Wände/Decken reinigen (trocken/nass)",
+      "Lampen, Fenster, Spiegel, Fliesen, Türen waschen",
+      "Entfernung von Schimmel, Kalk, Rost",
+      "Küchen- und Badezimmer-Tiefenreinigung",
+      "Klebereste und starke Verschmutzungen beseitigen",
+    ],
+  },
+  {
+    icon: <FaHome />,
+    title: "Spezielle Reinigung",
+    image: "spezial.jpg",
+    description:
+      "Reinigung einzelner Räume/Bereiche wie Küche, Bad, Schränke, Treppen usw.",
+    highlight: "Empfohlen: nach Bedarf",
+    list: [
+      "Gründliche Reinigung schwer zugänglicher Stellen",
+      "Individuelle Bereiche nach Kundenwunsch",
+      "Einsatz spezieller Mittel bei Bedarf (z. B. Desinfektion)",
+    ],
+  },
+  {
+    icon: <FaPaintRoller />,
+    title: "Reinigung nach Renovierung",
+    image: "renovierung.jpg",
+    description:
+      "Entfernt Baustaub, Klebereste, Farbspritzer usw. Durchführung nach Besichtigung – durch Vorarbeiter und Team.",
+    highlight: "Empfohlen: nach Renovierungsarbeiten – nach Vor-Ort-Begehung",
+    list: [
+      "Staubentfernung von allen Flächen",
+      "Glas-/Spiegelflächen, Fliesenfugen, Möbel, Böden",
+      "Entsorgung großer Mengen Müll",
+    ],
+  },
+  {
+    icon: <FaTruckMoving />,
+    title: "Reinigung nach einem Umzug",
+    image: "umzug.jpg",
+    description: "Die Liste hängt vom Verschmutzungsgrad ab, aber umfasst oft:",
+    highlight: "Empfohlen: direkt nach dem Umzug oder nach Bedarf",
+    list: [
+      "Küchenreinigung inkl. Möbel, Dunstabzug",
+      "Desinfektion Bad, Fenster, Teppiche, Beleuchtung",
+      "Müllentsorgung, Reinigung von Loggien, Böden usw.",
+    ],
+  },
+];
+
 const ServiceTypes = () => {
   return (
     <section className={css.section}>
@@ -48,7 +128,7 @@ const ServiceTypes = () => {
         Zeiten nutzen:
       </p>
 
-      <div className={css.grid}>
+      <div className={css.timeGrid}>
         {zeiten.map((item, i) => (
           <div key={i} className={css.card}>
             <span className={css.icon}>{item.icon}</span>
@@ -58,81 +138,39 @@ const ServiceTypes = () => {
       </div>
 
       <div className={css.textBlock}>
-        <h2>
-          <FaBroom /> Regelmäßige Reinigung
-        </h2>
-        <p>
-          Regelmäßige Reinigung ist die Grundlage für ein angenehmes und
-          sauberes Zimmer. Dazu gehört die Trocken- und Nassreinigung bestimmter
-          Flächen, Müll entfernen, Geschirr abwaschen und Ordnung schaffen.
-          <br />
-          <strong>Empfohlen:</strong> 1–3 Mal pro Woche.
-        </p>
-        <ul>
-          <li>Keine Reinigung von Möbeln/Geräten von innen</li>
-          <li>Kein Entfernen von Schmutz an schwer zugänglichen Stellen</li>
-          <li>Keine Teppich-/Polstertrockenreinigung</li>
-        </ul>
+        {cleaningTypes.map((item, i) => (
+          <div
+            key={i}
+            className={`${css.item} ${i % 2 === 0 ? css.rowReverse : ""}`}
+          >
+            <div className={css.text}>
+              <h2>
+                {item.icon} {item.title}
+              </h2>
+              <p>{item.description}</p>
+              {item.highlight && (
+                <p className={css.highlight}>{item.highlight}</p>
+              )}
+              {item.list && (
+                <ul>
+                  {item.list.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
 
-        <h2>
-          <FaPumpSoap /> Grundreinigung
-        </h2>
-        <p>
-          Für ein angenehmes und sicheres Raumklima. Umfasst Außenflächen,
-          Müllabfuhr, Geschirrspülen, Ordnung schaffen.
-          <br />
-          <strong>Empfohlen:</strong> 1–2 Mal pro Monat.
-        </p>
-        <ul>
-          <li>Keine Innenreinigung von Möbeln/Geräten</li>
-          <li>Keine Tiefenreinigung von Teppichen/Polstern</li>
-        </ul>
-
-        <h2>
-          <FaTools /> Allgemeine Reinigung
-        </h2>
-        <p>
-          Umfassende Reinigung innen und außen – empfohlen 2–4 Mal pro Jahr.
-        </p>
-        <ul>
-          <li>Wände/Decken reinigen (trocken/nass)</li>
-          <li>Lampen, Fenster, Spiegel, Fliesen, Türen waschen</li>
-          <li>Entfernung von Schimmel, Kalk, Rost</li>
-          <li>Küchen- und Badezimmer-Tiefenreinigung</li>
-          <li>Klebereste und starke Verschmutzungen beseitigen</li>
-        </ul>
-
-        <h2>
-          <FaHome /> Spezielle Reinigung
-        </h2>
-        <p>
-          Reinigung einzelner Räume/Bereiche wie Küche, Bad, Schränke, Treppen
-          usw.
-        </p>
-
-        <h2>
-          <FaPaintRoller /> Reinigung nach Renovierung
-        </h2>
-        <p>
-          Entfernt Baustaub, Klebereste, Farbspritzer usw.
-          <br />
-          Durchführung nach Besichtigung – durch Vorarbeiter und Team.
-        </p>
-        <ul>
-          <li>Staubentfernung von allen Flächen</li>
-          <li>Glas-/Spiegelflächen, Fliesenfugen, Möbel, Böden</li>
-          <li>Entsorgung großer Mengen Müll</li>
-        </ul>
-
-        <h2>
-          <FaTruckMoving /> Reinigung nach einem Umzug
-        </h2>
-        <p>Die Liste hängt vom Verschmutzungsgrad ab, aber umfasst oft:</p>
-        <ul>
-          <li>Küchenreinigung inkl. Möbel, Dunstabzug</li>
-          <li>Desinfektion Bad, Fenster, Teppiche, Beleuchtung</li>
-          <li>Müllentsorgung, Reinigung von Loggien, Böden usw.</li>
-        </ul>
+            <div className={css.imageBox}>
+              <img
+                src={
+                  new URL(`../../assets/images/${item.image}`, import.meta.url)
+                    .href
+                }
+                alt={item.title}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
