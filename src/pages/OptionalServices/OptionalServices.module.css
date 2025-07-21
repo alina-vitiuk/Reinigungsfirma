@@ -49,38 +49,70 @@
 }
 
 .detailSection {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 59, 113, 0.08);
+  background-color: #f9fbfd;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 59, 113, 0.05);
+  color: #003b71;
+  max-width: 900px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
 }
 
 .detailSection h2 {
+  text-align: center;
   color: #155fa0;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .detailSection h3 {
-  margin-top: 1.5rem;
-  font-size: 1.3rem;
+  text-align: center;
+  font-size: 1.4rem;
   color: #155fa0;
+  margin-bottom: 0.5rem;
 }
 
-.detailSection h4 {
-  margin-top: 1rem;
+.detailSection p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.block {
+  border-left: 4px solid #c8eafd;
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.block:hover {
+  background: #f0f8ff;
+}
+
+.block h4 {
+  margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  color: #0e4c84;
+  color: #003b71;
 }
 
-.detailSection ul {
+.block p {
+  margin: 0.25rem 0 0.75rem;
+  color: #444;
+}
+
+.block ul {
   padding-left: 1.2rem;
-  margin: 0.5rem 0 1rem;
+  margin: 0.25rem 0 0;
 }
 
-.detailSection li {
+.block li {
   margin-bottom: 0.4rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  color: #333;
 }
 
 @media (min-width: 768px) {

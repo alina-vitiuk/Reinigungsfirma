@@ -53,8 +53,8 @@ const OptionalServices = () => {
         <p>{services[activeIndex].subtitle}</p>
 
         {services[activeIndex].blocks.map((block, i) => (
-          <div key={i}>
-            <h4>{block.heading}</h4>
+          <div className={css.block} key={i}>
+            {block.heading && <h4>{block.heading}</h4>}
             {block.content && <p>{block.content}</p>}
             {block.list && (
               <ul>
