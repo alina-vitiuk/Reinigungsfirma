@@ -424,6 +424,233 @@ const serviceListData = [
     ],
   },
   {
+    title: "Zahnarztpraxen und medizinische Einrichtungen",
+    category: "business",
+    price: "ab 30€",
+    image: "zahnarzt.jpg",
+    blocks: [
+      {
+        heading: "Beschreibung",
+        content:
+          "Reinigung medizinischer Einrichtungen mit besonderem Fokus auf Hygiene, Desinfektion und Sicherheit – für ein sauberes, vertrauensvolles Umfeld für Patienten und Mitarbeitende.",
+      },
+      {
+        heading: "Reinigungsarten",
+        list: [
+          "Tägliche Desinfektionsreinigung aller Oberflächen",
+          "Regelmäßige Grundreinigung – inkl. Geräteflächen und sensibler Bereiche",
+          "Spezialreinigung nach Bedarf (z. B. nach Operationen oder Eingriffen)",
+        ],
+      },
+      {
+        heading: "Prozess und Bedingungen",
+        list: [
+          "Kostenloser Besichtigungstermin vor Ort",
+          "Maßgeschneiderter Hygieneplan nach RKI-Vorgaben",
+        ],
+      },
+      {
+        heading: "Vertrag",
+        list: ["Reinigungsfrequenz", "Spezielle Hygienestandards"],
+      },
+      {
+        heading: "Arbeitszeiten",
+        content:
+          "Reinigung außerhalb der Öffnungszeiten, auch nachts und am Wochenende möglich.",
+      },
+      {
+        heading: "Reinigungsmittel",
+        content:
+          "Wir verwenden zertifizierte, desinfizierende Reinigungsmittel, die für medizinische Bereiche geeignet sind.",
+      },
+      {
+        heading: "Rabatte",
+        list: [
+          "Rabatt für langfristige Verträge",
+          "Rabatt bei mehreren Standorten",
+        ],
+      },
+      {
+        heading: "Preisgestaltung",
+        list: [
+          "Größe und Ausstattung der Praxis",
+          "Anzahl der Behandlungsräume",
+          "Desinfektionsaufwand",
+          "Häufigkeit der Reinigung",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Wohnanlagen und große Wohnkomplexe",
+    category: "business",
+    price: "ab 35€",
+    image: "wohnanlage.jpg",
+    blocks: [
+      {
+        heading: "Beschreibung",
+        content:
+          "Reinigung von Treppenhäusern, Eingangsbereichen, Aufzügen und Gemeinschaftsflächen – für gepflegte Wohnumgebungen und zufriedene Bewohner.",
+      },
+      {
+        heading: "Reinigungsarten",
+        list: [
+          "Regelmäßige Reinigung von Treppen und Fluren",
+          "Fensterreinigung in Gemeinschaftsbereichen",
+          "Jährliche Grundreinigung inklusive Wände und Leuchten",
+        ],
+      },
+      {
+        heading: "Prozess und Bedingungen",
+        list: [
+          "Besichtigung und Objektanalyse",
+          "Individueller Reinigungsplan",
+        ],
+      },
+      {
+        heading: "Vertrag",
+        list: [
+          "Hausverwaltung als Ansprechpartner",
+          "Feste Uhrzeiten und Wochentage",
+        ],
+      },
+      {
+        heading: "Arbeitszeiten",
+        content:
+          "In der Regel werktags am Vormittag oder Abend, individuell planbar.",
+      },
+      {
+        heading: "Reinigungsmittel",
+        content:
+          "Alle Materialien inklusive. Umweltfreundliche Mittel auf Wunsch.",
+      },
+      {
+        heading: "Rabatte",
+        list: ["Rabatt bei mehreren Häusern", "Rabatt für Jahresverträge"],
+      },
+      {
+        heading: "Preisgestaltung",
+        list: [
+          "Größe des Objekts",
+          "Anzahl der Etagen",
+          "Häufigkeit der Reinigung",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Behördliche Einrichtungen und öffentliche Gebäude",
+    category: "business",
+    price: "ab 28€",
+    image: "behoerden.jpg",
+    blocks: [
+      {
+        heading: "Beschreibung",
+        content:
+          "Gründliche und diskrete Reinigung von Büros, Wartebereichen, Sanitäranlagen und Veranstaltungsräumen in Behörden und öffentlichen Gebäuden.",
+      },
+      {
+        heading: "Reinigungsarten",
+        list: [
+          "Regelmäßige Unterhaltsreinigung",
+          "Fenster- und Bodenpflege",
+          "Sonderreinigungen bei Veranstaltungen",
+        ],
+      },
+      {
+        heading: "Prozess und Bedingungen",
+        list: [
+          "Sicherheitsüberprüfung der Mitarbeiter",
+          "Objektbegehung und Abstimmung",
+        ],
+      },
+      {
+        heading: "Arbeitszeiten",
+        content:
+          "Reinigung außerhalb der Publikumszeiten, z. B. frühmorgens oder abends.",
+      },
+      {
+        heading: "Reinigungsmittel",
+        content:
+          "Einsatz von geprüften Reinigungsprodukten mit Umweltzertifikat.",
+      },
+      {
+        heading: "Rabatte",
+        list: [
+          "Sonderkonditionen für Kommunen",
+          "Rabatt bei Langzeitverträgen",
+        ],
+      },
+      {
+        heading: "Preisgestaltung",
+        list: [
+          "Größe und Nutzung des Gebäudes",
+          "Sicherheitsanforderungen",
+          "Häufigkeit der Reinigung",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Kultureinrichtungen, Galerien und Konzertsäle",
+    category: "business",
+    price: "ab 32€",
+    image: "galerie.jpg",
+    blocks: [
+      {
+        heading: "Beschreibung",
+        content:
+          "Spezialisierte Reinigung empfindlicher Flächen, Ausstellungsbereiche und Besuchereinrichtungen in Museen, Galerien und Veranstaltungshäusern.",
+      },
+      {
+        heading: "Reinigungsarten",
+        list: [
+          "Schonende Reinigung von Ausstellungsflächen",
+          "Polster- und Teppichpflege in Sitzbereichen",
+          "Reinigung vor/nach Veranstaltungen",
+        ],
+      },
+      {
+        heading: "Prozess und Bedingungen",
+        list: [
+          "Koordination mit Kuratoren und Technik",
+          "Besichtigung außerhalb der Öffnungszeiten",
+        ],
+      },
+      {
+        heading: "Vertrag",
+        list: [
+          "Reinigungszeiten nach Spielplan",
+          "Individuelle Vereinbarungen",
+        ],
+      },
+      {
+        heading: "Arbeitszeiten",
+        content: "Reinigung außerhalb der Öffnungs- oder Veranstaltungszeiten.",
+      },
+      {
+        heading: "Reinigungsmittel",
+        content:
+          "Verwendung besonders schonender Mittel für empfindliche Oberflächen.",
+      },
+      {
+        heading: "Rabatte",
+        list: [
+          "Rabatt bei Daueraufträgen",
+          "Sonderkonditionen für öffentliche Träger",
+        ],
+      },
+      {
+        heading: "Preisgestaltung",
+        list: [
+          "Fläche und Art der Ausstellungen",
+          "Zugänglichkeit und Schutzmaßnahmen",
+          "Reinigungsfrequenz",
+        ],
+      },
+    ],
+  },
+  {
     title: "Wohnung",
     category: "privat",
     price: "ab 24€",

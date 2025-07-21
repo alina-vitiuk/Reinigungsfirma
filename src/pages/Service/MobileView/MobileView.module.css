@@ -1,0 +1,138 @@
+.dropdownWrapper {
+  padding: 1rem;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #1b1b1b;
+}
+
+.dropdown {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #cbd5e1;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dropdownSelected {
+  font-size: 1rem;
+  flex: 1;
+  word-break: break-word;
+  color: #1b1b1b;
+}
+
+.dropdownArrow {
+  transition: transform 0.3s ease;
+}
+
+.dropdownArrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdownList {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  max-height: 60vh;
+  overflow-y: auto;
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.group {
+  padding: 0.5rem 1rem;
+}
+
+.groupLabel {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.2rem;
+}
+
+.dropdownItem {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  word-break: break-word;
+  color: #0073aa;
+}
+
+.dropdownItem:hover {
+  background-color: #f0f8ff;
+}
+
+.detailBox {
+  padding: 1rem;
+}
+
+.detailCard {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.detailCard h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #1b1b1b;
+}
+
+.detailBlock {
+  margin-bottom: 1rem;
+}
+
+.detailBlock h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: #1e40af;
+}
+
+.detailBlock p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.detailBlock ul {
+  padding-left: 1.2rem;
+}
+
+.detailBlock li {
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: #0073aa;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.orderButton {
+  margin-top: 1rem;
+  background-color: #003b71;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
