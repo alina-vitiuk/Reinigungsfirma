@@ -1,129 +1,113 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import css from "./About.module.css";
-import AboutUS from "../../Images/AboutUs.png";
-import whyChooseUsData from "./whyChooseUsData.js";
-import PartnerImage from "../../Images/partner.png";
-import teamData from "../../data/teamData.js";
 
+import bannerDesktop from "../../Images/About.jpg";
+import bannerTablet from "../../Images/About-tablet.jpg";
+import bannerMobile from "../../Images/About-mobile.jpg";
+
+import teamData from "../../data/teamData";
 import {
-  HiOutlineViewGridAdd,
-  HiOutlineUserGroup,
-  HiOutlineAcademicCap,
-} from "react-icons/hi";
-import { FaHandshake } from "react-icons/fa";
+  FaClipboardList,
+  FaCommentDots,
+  FaCalendarCheck,
+  FaUserCheck,
+} from "react-icons/fa";
 
-const About = ({ jobs }) => {
+const AboutPage = () => {
   return (
-    <section className={css.about}>
-      <h2 className={css.title}>LIK Reinigungsservice</h2>
-      <p className={css.text}>
-        Likreinigungsservice wurde im Jahr 2024 von den beiden Gründern als GbR
-        ins Leben gerufen. Der Hauptsitz befindet sich in Hamburg. Die
-        Aktivitäten des Unternehmens erstrecken sich über das gesamte Gebiet der
-        Europäischen Union. Unser Team wächst und entwickelt sich stetig weiter.
-        Wir sind stets offen für eine erfolgreiche und vertrauensvolle
-        Zusammenarbeit mit Kunden, Mitarbeitern und Partnern.
-      </p>
-      <img className={css.image} src={AboutUS} alt="Zusammenarbeit" />
-      <h3 className={css.subheading}>SPEZIALISIERUNG UND ZIELSETZUNG</h3>
-      <p className={css.text}>
-        Unser Ziel ist die professionelle Reinigung von Treppenhäusern und
-        Privatwohnungen bis hin zu großen Industrie- und Gewerbeobjekten.
-      </p>
-      <h3 className={css.subheading}>PRINZIPIEN DER UNTERNEHMENSFÜHRUNG</h3>
-      <p className={css.text}>
-        Beständigkeit, Verantwortung, Rechenschaftspflicht, Fairness,
-        Transparenz, Effizienz und Einhaltung von Grundsätzen
-      </p>
-      <h3 className={css.subheading}>UNSERE ZIELE</h3>
-      <ul className={css.list}>
-        <li className={css.listItem}>
-          <HiOutlineViewGridAdd className={css.icon} />
-          Wir erweitern unser Leistungsspektrum kontinuierlich, damit unsere
-          Kunden alle Reinigungsbedürfnisse an einem Ort abdecken können
-        </li>
-        <li className={css.listItem}>
-          <HiOutlineUserGroup className={css.icon} />
-          Wir schaffen ein starkes Netzwerk aus motivierten und qualifizierten
-          Fachkräften in der Reinigungsbranche
-        </li>
-        <li className={css.listItem}>
-          <HiOutlineAcademicCap className={css.icon} />
-          Wir fördern die berufliche Weiterentwicklung unseres Teams und
-          investieren in hochwertige, moderne Reinigungsprodukte und -geräte
-        </li>
-        <li className={css.listItem}>
-          <FaHandshake className={css.icon} />
-          Wir bauen langfristige, vertrauensvolle Beziehungen zu unseren Kunden
-          durch gleichbleibend hohe Qualität und Verlässlichkeit auf
-        </li>
-      </ul>
-      <h3 className={css.subheading}>Ihre Vorteile mit uns</h3>
-      <ul className={css.list}>
-        {whyChooseUsData.map((point, index) => (
-          <li key={index} className={css.listItem}>
-            {point}
-          </li>
-        ))}
-      </ul>
-      <div className={css.partnerSection}>
-        <img
-          src={PartnerImage}
-          alt="Partnerschaft"
-          className={css.partnerImage}
-        />
-        <div className={css.partnerText}>
-          <h3>FÜR PARTNER</h3>
+    <div className={css.aboutWrapper}>
+      <section className={css.bannerSection}>
+        <picture>
+          <source srcSet={bannerDesktop} media="(min-width: 1280px)" />
+          <source srcSet={bannerTablet} media="(min-width: 768px)" />
+          <img
+            src={bannerMobile}
+            alt="Reinigungsservice Banner"
+            className={css.bannerImage}
+          />
+        </picture>
+      </section>
+
+      <section className={css.aboutSection}>
+        <div className={css.aboutText}>
+          <h2>Ihr Reinigungsservice</h2>
           <p>
-            Wir sind offen für verlässliche Partnerschaften mit Lieferanten und
-            anderen Unternehmen sowie für die Teilnahme an staatlichen
-            Programmen und wichtigen Initiativen zur Entwicklung und
-            Verbesserung des Lebens in Deutschland und weltweit
+            Als hanseatisches Unternehmen legen wir großen Wert auf
+            Verlässlichkeit und Handschlagqualität. Unser Ziel ist es, für Sie
+            gründlich, schnell und diskret zu arbeiten. Vertrauen Sie auf unser
+            erfahrenes Team.
           </p>
-          <p>
-            <em>Kontaktieren Sie uns – wir freuen uns auf Ihre Nachricht!</em>
-          </p>
-          <button className={css.partnerButton}>
-            Ihre Anregungen und Fragen
-          </button>
+          <ul className={css.bullets}>
+            <li>Höchste Ansprüche an Qualität und Zuverlässigkeit</li>
+            <li>Sorgfältiger Umgang mit Ihrem Eigentum</li>
+            <li>Gründliche Sauberkeit bis ins Detail</li>
+            <li>Faire Preise bei exzellentem Service</li>
+          </ul>
         </div>
-      </div>
-      <h2 className={css.heading}>Unser Team</h2>
-      <div className={css.grid}>
-        {teamData.map((member, index) => (
-          <div key={index} className={css.card}>
-            <img
-              src={
-                new URL(`../../assets/images/${member.image}`, import.meta.url)
-                  .href
-              }
-              alt={member.name}
-              className={css.teamImage}
-            />
-            <h3 className={css.role}>{member.role}</h3>
-            <p className={css.name}>{member.name}</p>
-            <p className={css.description}>{member.description}</p>
-            <div className={css.contact}>
-              <a href={`tel:${member.phone}`}>{member.phone}</a>
-              <a href={`mailto:${member.email}`}>{member.email}</a>
-            </div>
+        <div className={css.aboutImage}>{/* Фото команди */}</div>
+      </section>
+
+      {/* Steps Section */}
+      <section className={css.stepsSection}>
+        <h2>Wie funktioniert es?</h2>
+        <div className={css.stepsGrid}>
+          <div className={css.step} data-step="Schritt 1">
+            <FaClipboardList className={css.icon} />
+            <h3>Buchungsformular ausfüllen</h3>
+            <p>
+              Tragen Sie Ihre Informationen in unser Formular ein – in nur 1–2
+              Minuten ist alles erledigt.
+            </p>
           </div>
-        ))}
-      </div>
-      <h2>Offene Stellen</h2>
-      <ul className={css.jobCards}>
-        {jobs.map((job) => (
-          <li key={job.id} className={css.jobCard}>
-            <Link to={`/jobs/${job.id}`} className={css.jobLinkCard}>
-              <img src={job.image} alt={job.title} className={css.jobImage} />
-              <div className={css.jobTitle}>{job.title}</div>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </section>
+          <div className={css.step} data-step="Schritt 2">
+            <FaCommentDots className={css.icon} />
+            <h3>Persönliche Einschätzung erhalten</h3>
+            <p>
+              Basierend auf Ihren Angaben erhalten Sie von uns eine individuell
+              abgestimmte Einschätzung Ihres Reinigungsbedarfs.
+            </p>
+          </div>
+          <div className={css.step} data-step="Schritt 3">
+            <FaCalendarCheck className={css.icon} />
+            <h3>Wunschtermin auswählen</h3>
+            <p>
+              Wählen Sie den Zeitpunkt aus, zu dem unser Reinigungsteam bei
+              Ihnen vorbeikommen soll.
+            </p>
+          </div>
+          <div className={css.step} data-step="Schritt 4">
+            <FaUserCheck className={css.icon} />
+            <h3>Ihr Reinigungsexperte kommt vorbei</h3>
+            <p>
+              Zum vereinbarten Termin erscheint unsere Fachkraft und sorgt für
+              gründliche Sauberkeit bei Ihnen vor Ort.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className={css.teamSection}>
+        <h2>Unser Team</h2>
+        <div className={css.teamGrid}>
+          {teamData.map((member, i) => (
+            <div key={i} className={css.teamCard}>
+              <img
+                // src={require(`../../assets/images/${member.image}`)}
+                alt={member.name}
+                className={css.teamImage}
+              />
+              <h3>{member.role}</h3>
+              <p className={css.name}>{member.name}</p>
+              <p className={css.description}>{member.description}</p>
+              <p className={css.contact}>📞 {member.phone}</p>
+              <p className={css.contact}>✉️ {member.email}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default About;
+export default AboutPage;
