@@ -4,6 +4,7 @@ import css from "./About.module.css";
 import AboutUS from "../../Images/AboutUs.png";
 import whyChooseUsData from "./whyChooseUsData.js";
 import PartnerImage from "../../Images/partner.png";
+import teamData from "../../data/teamData.js";
 
 import {
   HiOutlineViewGridAdd,
@@ -87,6 +88,28 @@ const About = ({ jobs }) => {
             Ihre Anregungen und Fragen
           </button>
         </div>
+      </div>
+      <h2 className={css.heading}>Unser Team</h2>
+      <div className={css.grid}>
+        {teamData.map((member, index) => (
+          <div key={index} className={css.card}>
+            <img
+              src={
+                new URL(`../../assets/images/${member.image}`, import.meta.url)
+                  .href
+              }
+              alt={member.name}
+              className={css.teamImage}
+            />
+            <h3 className={css.role}>{member.role}</h3>
+            <p className={css.name}>{member.name}</p>
+            <p className={css.description}>{member.description}</p>
+            <div className={css.contact}>
+              <a href={`tel:${member.phone}`}>{member.phone}</a>
+              <a href={`mailto:${member.email}`}>{member.email}</a>
+            </div>
+          </div>
+        ))}
       </div>
       <h2>Offene Stellen</h2>
       <ul className={css.jobCards}>

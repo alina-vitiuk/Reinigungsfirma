@@ -24,6 +24,7 @@ a {
 
 .slogan {
   font-size: 1rem;
+  font-style: italic;
   margin-bottom: 1rem;
   line-height: 1.5;
 }
@@ -33,6 +34,7 @@ a {
   color: #155fa0;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 0.4rem 0;
   font-size: 0.95rem;
   word-break: break-word;
@@ -42,6 +44,29 @@ a {
   margin-right: 0.5rem;
   color: #104d83;
   flex-shrink: 0;
+}
+
+.selectLocation {
+  width: 200px;
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #b0cde2;
+  border-radius: 8px;
+  background-color: #dcf1fe;
+  color: #003b71;
+  outline: none;
+  font-family: inherit;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.selectLocation:focus {
+  border-color: #155fa0;
+  box-shadow: 0 0 4px rgba(21, 95, 160, 0.3);
+}
+
+.selectLocation option {
+  background-color: white;
+  color: #003b71;
 }
 
 .center ul,
@@ -116,7 +141,7 @@ a {
 @media (min-width: 768px) {
   .footer {
     width: 100%;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 1.2rem;
   }
 
   .top {
@@ -140,6 +165,11 @@ a {
 
   .contact p {
     font-size: 0.85rem;
+  }
+
+  .selectLocation {
+    width: 220px;
+    padding: 0.2rem 0.5rem;
   }
 
   .center li,
@@ -175,6 +205,10 @@ a {
 
   .contact p {
     font-size: 1rem;
+  }
+
+  .selectLocation {
+    width: 240px;
   }
 
   .center li,

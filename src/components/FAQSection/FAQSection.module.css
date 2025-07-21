@@ -44,6 +44,11 @@
   cursor: pointer;
 }
 
+.active {
+  background-color: #e6f0fa;
+  color: #003b71;
+}
+
 .icon {
   transition: transform 0.3s ease;
   font-size: 1.25rem;
@@ -101,7 +106,6 @@
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
-  margin-bottom: 4px;
   width: 100%;
   box-sizing: border-box;
 }

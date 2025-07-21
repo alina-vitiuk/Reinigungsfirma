@@ -1,19 +1,14 @@
 import css from "./Header.module.css";
 import { HiMenu } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import Logo from "../../Images/Logo.jpg";
 
 const Header = () => {
   return (
     <div className={css.container}>
       <nav className={css.navList}>
         <Link to="/" className={css.navLink}>
-          <img
-            src="../../Images/logo.png"
-            alt="logo"
-            width="25"
-            height="10"
-            className={css.logoImage}
-          />
+          <img src={Logo} alt="logo" className={css.logoImage} />
         </Link>
 
         <ul className={css.navMenuList}>

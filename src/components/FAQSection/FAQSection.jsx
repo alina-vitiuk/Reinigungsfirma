@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import css from "./FAQSection.module.css";
+import emailjs from "emailjs-com";
 import { HiChevronDown, HiMail, HiPhone } from "react-icons/hi";
 
 const faqs = [
@@ -22,9 +23,40 @@ const faqs = [
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [form, setForm] = useState({ phone: "", message: "" });
+  const [isSent, setIsSent] = useState(false);
 
   const toggleIndex = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const handleChange = (e) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSend = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_b2fiv48", // Обов'язково вкажи свій Service ID
+        "template_sbnd64m",
+        {
+          title: "Kontaktformular", // Значення за замовчуванням
+          name: "Website-Anfrage", // Значення за замовчуванням
+          phone: form.phone,
+          email: "noreply@example.com", // Значення за замовчуванням
+          message: form.message,
+        },
+        "905YbsfLmHZ_AUaD4"
+      )
+      .then(() => {
+        setIsSent(true);
+        setForm({ phone: "", message: "" });
+      })
+      .catch((err) => {
+        console.error("Send failed", err);
+      });
   };
 
   return (
@@ -36,7 +68,9 @@ const FAQSection = () => {
           {faqs.map((item, index) => (
             <div key={index} className={css.faqItem}>
               <button
-                className={css.faqQuestion}
+                className={`${css.faqQuestion} ${
+                  activeIndex === index ? css.active : ""
+                }`}
                 onClick={() => toggleIndex(index)}
                 aria-expanded={activeIndex === index}
               >
@@ -72,20 +106,35 @@ const FAQSection = () => {
           <a href="tel:+4917661122476">+49 176 6112 2476</a>
         </div>
 
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Ihre Telefonnummer*"
-          className={css.phoneInput}
-          required
-          pattern="^[+0-9\s\-]{6,}$"
-        />
+        <form onSubmit={handleSend}>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Ihre Telefonnummer*"
+            className={css.phoneInput}
+            required
+            pattern="^[+0-9\s\-]{6,}$"
+            value={form.phone}
+            onChange={handleChange}
+          />
 
-        <textarea
-          className={css.messageBox}
-          placeholder="Ihre Nachricht an uns"
-        ></textarea>
-        <button className={css.sendButton}>Nachricht senden</button>
+          <textarea
+            className={css.messageBox}
+            name="message"
+            placeholder="Ihre Nachricht an uns"
+            required
+            value={form.message}
+            onChange={handleChange}
+          ></textarea>
+
+          <button type="submit" className={css.sendButton}>
+            Nachricht senden
+          </button>
+        </form>
+
+        {isSent && (
+          <p className={css.successMsg}>Nachricht wurde gesendet ✅</p>
+        )}
       </div>
     </section>
   );

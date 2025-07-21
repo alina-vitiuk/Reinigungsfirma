@@ -33,6 +33,11 @@ const Footer = () => {
                 info@likreinigungsservice.com
               </a>
             </li>
+            <li>
+              <select className={css.selectLocation}>
+                <option>Hamburg</option>
+              </select>
+            </li>
           </ul>
         </div>
 

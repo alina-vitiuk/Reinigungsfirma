@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from "react";
 import css from "./Hero.module.css";
 
-const images = [
+const imagesMobile = [
+  new URL("../../Images/Hero1-mobile.jpg", import.meta.url).href,
+  new URL("../../Images/Hero2-mobile.jpg", import.meta.url).href,
+];
+
+const imagesTablet = [
+  new URL("../../Images/Hero1-tablet.jpg", import.meta.url).href,
+  new URL("../../Images/Hero2-tablet.jpg", import.meta.url).href,
+];
+
+const imagesDesktop = [
   new URL("../../Images/Hero1.jpg", import.meta.url).href,
   new URL("../../Images/Hero2.jpg", import.meta.url).href,
 ];
@@ -19,16 +29,18 @@ const Hero = () => {
 
   return (
     <section className={css.hero}>
-      {images.map((img, index) => (
-        <img
-          key={index}
-          src={img}
-          alt={`Hero ${index + 1}`}
-          className={`${css.image} ${
-            index === activeImage ? css.visible : css.hidden
-          }`}
+      <picture>
+        <source srcSet={imagesMobile[activeImage]} media="(max-width: 767px)" />
+        <source
+          srcSet={imagesTablet[activeImage]}
+          media="(max-width: 1279px)"
         />
-      ))}
+        <img
+          src={imagesDesktop[activeImage]}
+          alt={`Hero ${activeImage + 1}`}
+          className={css.image}
+        />
+      </picture>
     </section>
   );
 };
