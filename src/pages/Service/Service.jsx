@@ -84,19 +84,21 @@ const ServicePage = () => {
                   alt={activeService.title}
                   className={css.detailImage}
                 />
-                {activeService.blocks.map((block, i) => (
-                  <div key={i}>
-                    {block.heading && <h3>{block.heading}</h3>}
-                    {block.content && <p>{block.content}</p>}
-                    {block.list && (
-                      <ul>
-                        {block.list.map((item, idx) => (
-                          <li key={idx}>{item}</li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                ))}
+                {activeService.blocks &&
+                  activeService.blocks.length > 0 &&
+                  activeService.blocks.map((block, i) => (
+                    <div key={i}>
+                      {block.heading && <h3>{block.heading}</h3>}
+                      {block.content && <p>{block.content}</p>}
+                      {block.list && (
+                        <ul>
+                          {block.list.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
               </div>
 
               <aside className={css.sidebar}>
