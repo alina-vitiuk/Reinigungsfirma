@@ -93,15 +93,15 @@ const AboutPage = () => {
           {teamData.map((member, i) => (
             <div key={i} className={css.teamCard}>
               <img
-                // src={require(`../../assets/images/${member.image}`)}
+                src={member.image}
                 alt={member.name}
                 className={css.teamImage}
               />
               <h3>{member.role}</h3>
               <p className={css.name}>{member.name}</p>
               <p className={css.description}>{member.description}</p>
-              <p className={css.contact}>📞 {member.phone}</p>
-              <p className={css.contact}>✉️ {member.email}</p>
+              {member.phone && <p className={css.contact}>📞 {member.phone}</p>}
+              {member.email && <p className={css.contact}>✉️ {member.email}</p>}
             </div>
           ))}
         </div>
