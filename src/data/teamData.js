@@ -1,47 +1,47 @@
+import Tomanova from "../Images/Tomanova.jpeg";
+
 const teamData = [
   {
-    role: "Personalmanager/in",
-    name: "Nachname …",
+    role: "Kundenberaterin",
+    name: "Olha Peresada ",
     phone: "+49 …",
-    email: "personal@example.com",
+    email: "kontakt@likreinigungsservice.com",
     image: "personal.jpg",
-    description: "Ansprechpartner/in für Bewerbungen und Personalfragen.",
+    description:
+      "Ihre Ansprechpartnerin für Bewerbungen, Personalangelegenheiten und interne Kommunikation",
   },
   {
-    role: "Kundenmanager/in",
-    name: "Nachname …",
-    phone: "+49 …",
-    email: "kunden@example.com",
+    role: "Kundenberaterin",
+    name: "Anastasiia Pereverten ",
+    phone: "+4917661122476",
+    email: "info@likreinigungsservice.com",
     image: "kunden.jpg",
     description:
-      "Anfragen von Kund:innen, Angebotsanfragen und Vertragsabsprachen.",
+      "Betreuung von Kundenanfragen, Angebotserstellung und Vertragsabwicklung",
   },
   {
-    role: "Qualitätskontrolleur/in",
+    role: "Manager für Personal- und Kundenbetreuung",
     name: "Nachname …",
-    phone: "+49 …",
-    email: "qualitaet@example.com",
+    phone: "+4917630531421",
+    email: "manager@likreinigungsservice.com",
     image: "qualitaet.jpg",
     description:
-      "Kontrolle der Reinigungsqualität und Einhaltung von Standards.",
+      "Verantwortlich für die Qualitätssicherung, Mitarbeiterkoordination und Kundenzufriedenheit",
   },
   {
-    role: "Geschäftsführer/in",
-    name: "Nachname …",
-    phone: "+49 …",
-    email: "leitung@example.com",
+    role: "Mitgründer & geschäftsführender Gesellschafter",
+    name: "Olena Yuksel",
+    email: "admin@likreinigungsservice.com",
     image: "leitung.jpg",
     description:
-      "Gesamtleitung und strategische Koordination des Unternehmens.",
+      "Verantwortlich für die operative Geschäftsführung und strategische Entwicklung des Unternehmens",
   },
   {
-    role: "Gründer/innen",
-    name: "Nachnamen …",
-    phone: "+49 …",
-    email: "gruender@example.com",
-    image: "gruender.jpg",
+    role: "Gründerin der Olena Yuksel und Iryna Tomanova GbR",
+    name: "Iryna Tomanova",
+    image: Tomanova,
     description:
-      "Vision, Entwicklung und strategische Ausrichtung des Unternehmens.",
+      "Mitbegründerin und Impulsgeberin für Innovation, Vision und Unternehmensausrichtung",
   },
 ];
 

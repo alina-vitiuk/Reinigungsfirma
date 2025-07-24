@@ -1,5 +1,6 @@
 import css from "./Header.module.css";
 import { HiMenu } from "react-icons/hi";
+import { MdOutlineEditNote } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Logo from "../../Images/Logo.jpg";
 
@@ -49,18 +50,10 @@ const Header = () => {
           </li>
         </ul>
 
-        <address className={css.addressMenu}>
-          <ul className={css.addressList}>
-            <li className={css.addressListItem}>
-              <a href="tel:+4917661122476">tel:+4917661122476</a>
-            </li>
-            <li className={css.addressListItem}>
-              <a href="mailto:info@likreinigungsservice.com">
-                info@likreinigungsservice.com
-              </a>
-            </li>
-          </ul>
-        </address>
+        <Link to="/bestellen" className={css.orderBtn}>
+          <span>Kostenlose Preisberechnung</span>
+          <strong>BESTELLEN</strong>
+        </Link>
       </nav>
 
       <button type="button" className={css.burgerBtn}>

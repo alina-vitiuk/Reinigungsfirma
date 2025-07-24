@@ -15,6 +15,7 @@ import AdditionalServices from "../components/AdditionalServices/AdditionalServi
 import Callback from "../pages/Callback/Callback";
 import FAQSection from "../components/FAQSection/FAQSection";
 import Contact from "../pages/Contact/Contact";
+import OrderPage from "../pages/OrderPage/OrderPage";
 import Resume from "../pages/Resume/Resume";
 import Coupon from "../pages/Coupon/Coupon";
 import ServiceTypes from "../pages/ServiceTypes/ServiceTypes";
@@ -44,6 +45,7 @@ const AppRoutes = () => {
       <Route path="/zusatzleistungen" element={<OptionalServices />} />
       <Route path="/jobs/:id" element={<JobDetails />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/bestellen" element={<OrderPage />} />
       <Route path="/resume" element={<Resume />} />
       <Route path="/callback" element={<Callback />} />
       <Route path="/callback" element={<Callback />} />
