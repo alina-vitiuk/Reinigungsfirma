@@ -1,7 +1,7 @@
 import Peresada from "../Images/Peresada.jpeg";
 import Pereverten from "../Images/Pereverten.jpeg";
 import Margo from "../Images/1111.jpeg";
-import Yuksel from "../Images/Yuksel.jpg";
+import Yuksel from "../Images/Yuksel.jpeg";
 import Tomanova from "../Images/Tomanova.jpeg";
 
 const teamData = [
