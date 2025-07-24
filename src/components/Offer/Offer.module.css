@@ -5,7 +5,7 @@
 .container {
   width: 100%;
   box-sizing: border-box;
-  padding: 2.5rem 0rem;
+  /* padding: 2.5rem 0rem; */
   text-align: center;
   font-family: "Segoe UI", sans-serif;
 }
@@ -73,7 +73,7 @@
 @media (min-width: 768px) {
   .container {
     width: 768px;
-    padding: 3.5rem 0rem;
+    /* padding: 3.5rem 0rem; */
   }
 
   .offerText {
@@ -99,7 +99,7 @@
 @media (min-width: 1280px) {
   .container {
     width: 1280px;
-    padding: 4rem 0rem;
+    /* padding: 4rem 0rem; */
   }
 
   .offerText {

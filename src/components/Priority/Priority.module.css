@@ -20,7 +20,7 @@
   margin-bottom: 10px;
 }
 
-.listItem {
+.listItem:not(:last-child) {
   margin-bottom: 15px;
 }
 
@@ -49,7 +49,6 @@
 @media screen and (min-width: 1280px) {
   .container {
     width: 1280px;
-    margin-bottom: 40px;
     display: flex;
   }
 
