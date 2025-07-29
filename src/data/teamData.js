@@ -25,7 +25,7 @@ const teamData = [
   },
   {
     role: "Manager für Personal- und Kundenbetreuung",
-    name: "Nachname …",
+    name: "Margaryta Koniuch",
     image: Margo,
     phone: "+4917630531421",
     email: "manager@likreinigungsservice.com",

@@ -108,6 +108,9 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} LIK Reinigungsservice. Alle Rechte
           vorbehalten.
         </Link>
+        <Link to="/datenschutz" className={css.bottomText}>
+          Datenschutzerklärung
+        </Link>
       </div>
     </footer>
   );

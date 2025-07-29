@@ -127,6 +127,8 @@ a {
 
 .bottom {
   text-align: center;
+  display: flex;
+  flex-direction: column;
   margin-top: 2rem;
   font-size: 0.85rem;
   color: #bbb;
@@ -230,5 +232,11 @@ a {
 
   .callbackBtn {
     font-size: 1rem;
+  }
+
+  .bottom {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
   }
 }

@@ -9,6 +9,7 @@ import About from "../pages/About/About";
 import JobDetails from "../pages/JobDetails/JobDetails";
 import Service from "../pages/Service/Service";
 import Impressum from "../pages/Impressum/Impressum";
+import Privacy from "../pages/Privacy/Privacy";
 import Jobs from "../pages/Jobs/Jobs";
 import NotFound from "../pages/NotFound/NotFound";
 import AdditionalServices from "../components/AdditionalServices/AdditionalServices";
@@ -51,6 +52,7 @@ const AppRoutes = () => {
       <Route path="/callback" element={<Callback />} />
       <Route path="/coupon" element={<Coupon />} />
       <Route path="/impressum" element={<Impressum />} />
+      <Route path="/datenschutz" element={<Privacy />} />
       <Route path="/jobs" element={<Jobs />} />
 
       <Route path="*" element={<NotFound />} />
